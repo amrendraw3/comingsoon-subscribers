@@ -5,7 +5,7 @@ var url = 'mongodb://localhost:27017/subscribers';
 
 /* GET home page. */
 router.get('/', function(req, res, next) {
-  res.render('index', { message: '' });
+  res.render('index', { message: '', type: '' });
 });
 
 router.post('/subscribe', function(req, res, next) {
@@ -13,7 +13,7 @@ router.post('/subscribe', function(req, res, next) {
 	console.log('Subscribing!');
 	if(!req.body || !req.body.email) {
 		console.log('Email not provided!')
-		res.render('index', { message: '' });
+		res.render('index', { message: '', type: 'error'});
 		return;
 	}
 
@@ -24,7 +24,7 @@ router.post('/subscribe', function(req, res, next) {
 	  console.log("Connected correctly to server");
 	  if(err) {
 	  	console.log('Error in database connection!');
-	  	res.render('index', { message: '' });
+	  	res.render('index', { message: '', type: 'error'});
 	  	return;
 	  }
 
@@ -33,11 +33,11 @@ router.post('/subscribe', function(req, res, next) {
 	  		console.log('Visitor subscribed!')
 				db.close();
 				// res.json (req.body);
-				res.render('index', { message: '' });
+				res.render('index', { message: 'You have been subscribed successfully!', type: 'success'});
 	  	} else {
 	  		console.log('Visitor not subscribed!')
 				// res.json (req.body);
-				res.render('index', { message: '' });
+				res.render('index', { message: '', type: 'error'});
 				db.close();
 	  	}
 	  });
