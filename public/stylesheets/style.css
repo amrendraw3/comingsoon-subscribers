@@ -7,6 +7,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 @import url(http://fonts.googleapis.com/css?family=Open+Sans:400,800,600);
 @import url(http://fonts.googleapis.com/css?family=Lobster+Two:700);
 body {
+	background: black !important;
 	color:#FFF; 
 	font-family: 'Open Sans', sans-serif;
 	min-width:960px;
@@ -82,6 +83,7 @@ margin: 0 auto;
 position: relative;
 width: 920px;
 z-index: 1;
+margin-top: 6%;
 }
 #socialIcons {
 display:block;

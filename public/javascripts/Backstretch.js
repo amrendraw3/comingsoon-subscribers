@@ -31,7 +31,7 @@
     };
     var r = {
             left: 0,
-            top: 0,
+            top: "-230px",
             overflow: "hidden",
             margin: 0,
             padding: 0,
