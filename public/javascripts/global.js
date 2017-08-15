@@ -7,7 +7,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 $( function() {
 // Add background image
 	$.backstretch('images/SIX38 LOGO GOLD BACKGROUND .jpg');
-	var endDate = "August 14, 2017 23:59:59";
+	var endDate = "August 21, 2017 23:59:59";
 	$('.countdown.simple').countdown({ date: endDate });
 	$('.countdown.styled').countdown({
 	  date: endDate,
